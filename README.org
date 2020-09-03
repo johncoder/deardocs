@@ -1,0 +1,43 @@
+#+TITLE: Dear Docs,
+#+TOC: nil
+
+Generate, for me, with grandeur, a complete set of documentation based on /real/ code that /actually ran/ *successfully*.
+
+For you, I left some instructions in =/deardocs/publish.el= for you to follow. Take care and do your best! Don't worry if you run into any kind of problem, it's probably something I can fix (as long as you're able to give me helpful information about what went wrong).
+
+* Instructions
+
+Clone this repository, and run `make`. Now you have a `deardocs` image!
+
+In a directory you'd like to publish, run a container from the image:
+
+#+begin_src sh
+docker run -v $(pwd):/deardocs deardocs
+#+end_src
+
+* Configuration
+
+Create a `publish.el` file in the folder containing your org files. Here's an example:
+
+#+begin_src emacs-lisp
+  ;;; package -- Summary:
+
+  ;;; Commentary:
+
+  ;;; Code:
+
+  (setq org-publish-project-alist
+        '(("org"
+           :base-directory "/deardocs/"
+           :publishing-directory "/deardocs/public"
+           :publishing-function org-html-publish-to-html
+           :section-numbers nil
+           :table-of-contents nil
+           :style "")))
+
+  (org-publish-project "org")
+  (message "hello, from my package!")
+  ;;; publish.el ends here
+#+end_src
+
+The important bits are to use `/deardocs` paths, since this is where the image will look for the files. When it finishes, the published files will be in `:publishing-directory`.
