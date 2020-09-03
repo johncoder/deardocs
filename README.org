@@ -3,7 +3,7 @@
 
 Generate, for me, with grandeur, a complete set of documentation based on /real/ code that /actually ran/ *successfully*.
 
-For you, I left some instructions in =/deardocs/publish.el= for you to follow. Take care and do your best! Don't worry if you run into any kind of problem, it's probably something I can fix (as long as you're able to give me helpful information about what went wrong).
+For you, I left some instructions in =/deardocs/publish.el= to follow. Take care and do your best! Don't worry if you run into any kind of problem, it's probably something I can fix (as long as you're able to give me helpful information about what went wrong).
 
 * Instructions
 
