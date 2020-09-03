@@ -7,7 +7,7 @@ For you, I left some instructions in =/deardocs/publish.el= for you to follow. T
 
 * Instructions
 
-Clone this repository, and run `make`. Now you have a `deardocs` image!
+Clone this repository, and run =make=. Now you have a =deardocs= image!
 
 In a directory you'd like to publish, run a container from the image:
 
@@ -17,7 +17,7 @@ docker run -v $(pwd):/deardocs deardocs
 
 * Configuration
 
-Create a `publish.el` file in the folder containing your org files. Here's an example:
+Create a =publish.el= file in the folder containing your org files. Here's an example:
 
 #+begin_src emacs-lisp
   ;;; package -- Summary:
@@ -40,4 +40,4 @@ Create a `publish.el` file in the folder containing your org files. Here's an ex
   ;;; publish.el ends here
 #+end_src
 
-The important bits are to use `/deardocs` paths, since this is where the image will look for the files. When it finishes, the published files will be in `:publishing-directory`.
+The important bits are to use =/deardocs= paths, since this is where the image will look for the files. When it finishes, the published files will be in `:publishing-directory`.
