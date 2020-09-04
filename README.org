@@ -40,4 +40,4 @@ Create a =publish.el= file in the folder containing your org files. Here's an ex
   ;;; publish.el ends here
 #+end_src
 
-The important bits are to use =/deardocs= paths, since this is where the image will look for the files. When it finishes, the published files will be in `:publishing-directory`.
+The important bits are to use =/deardocs= paths, since this is where the image will look for the files. When it finishes, the published files will be in =:publishing-directory=.
